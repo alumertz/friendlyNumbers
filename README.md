@@ -3,7 +3,7 @@
 Two numbers are mutually friendly if the ratio of the sum of all divisors of the number
 and the number itself is equal to the corresponding ratio of the other number. This ratio is known as the abundancy of a number. For example, 30 and 140 are friendly, since the abundancy of these two numbers is equal. Figure B.1 show this example.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 This problem consists in finding all pairs of natural numbers that are mutually friendly
 within the range of positive integers provided to the program at the start of the
@@ -24,4 +24,4 @@ The output must be written to the standard output.
 
 ### Example
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
