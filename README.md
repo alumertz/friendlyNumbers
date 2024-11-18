@@ -1,4 +1,11 @@
 
+# Compiling e executing
+`gcc main.c –o main –fopenmp `
+`./main`
+
+# Definig thread number
+export OMP_NUM_THREADS=numeroThreads
+
 # Mutually Friendly Numbers
 Two numbers are mutually friendly if the ratio of the sum of all divisors of the number
 and the number itself is equal to the corresponding ratio of the other number. This ratio is known as the abundancy of a number. For example, 30 and 140 are friendly, since the abundancy of these two numbers is equal. Figure B.1 show this example.
