@@ -1,0 +1,453 @@
+Digite o intervalo (start end): 5 29
+Intervalo: 5 to 29
+last = 25
+
+i = 5, ii = 0
+sum (inicial) = 6
+gcd(6, 5) = 1
+num[0] = 6, den[0] = 5
+
+i = 6, ii = 1
+sum (inicial) = 7
+factor = 2, sum = 12, done = 3
+gcd(12, 6) = 6
+num[1] = 2, den[1] = 1
+
+i = 7, ii = 2
+sum (inicial) = 8
+gcd(8, 7) = 1
+num[2] = 8, den[2] = 7
+
+i = 8, ii = 3
+sum (inicial) = 9
+factor = 2, sum = 15, done = 4
+gcd(15, 8) = 1
+num[3] = 15, den[3] = 8
+
+i = 9, ii = 4
+sum (inicial) = 10
+factor = 3, sum = 13, done = 3
+gcd(13, 9) = 1
+num[4] = 13, den[4] = 9
+
+i = 10, ii = 5
+sum (inicial) = 11
+factor = 2, sum = 18, done = 5
+gcd(18, 10) = 2
+num[5] = 9, den[5] = 5
+
+i = 11, ii = 6
+sum (inicial) = 12
+gcd(12, 11) = 1
+num[6] = 12, den[6] = 11
+
+i = 12, ii = 7
+sum (inicial) = 13
+factor = 2, sum = 21, done = 6
+factor = 3, sum = 28, done = 4
+gcd(28, 12) = 4
+num[7] = 7, den[7] = 3
+
+i = 13, ii = 8
+sum (inicial) = 14
+gcd(14, 13) = 1
+num[8] = 14, den[8] = 13
+
+i = 14, ii = 9
+sum (inicial) = 15
+factor = 2, sum = 24, done = 7
+gcd(24, 14) = 2
+num[9] = 12, den[9] = 7
+
+i = 15, ii = 10
+sum (inicial) = 16
+factor = 3, sum = 24, done = 5
+gcd(24, 15) = 3
+num[10] = 8, den[10] = 5
+
+i = 16, ii = 11
+sum (inicial) = 17
+factor = 2, sum = 27, done = 8
+factor = 4, sum = 31, done = 4
+gcd(31, 16) = 1
+num[11] = 31, den[11] = 16
+
+i = 17, ii = 12
+sum (inicial) = 18
+gcd(18, 17) = 1
+num[12] = 18, den[12] = 17
+
+i = 18, ii = 13
+sum (inicial) = 19
+factor = 2, sum = 30, done = 9
+factor = 3, sum = 39, done = 6
+gcd(39, 18) = 3
+num[13] = 13, den[13] = 6
+
+i = 19, ii = 14
+sum (inicial) = 20
+gcd(20, 19) = 1
+num[14] = 20, den[14] = 19
+
+i = 20, ii = 15
+sum (inicial) = 21
+factor = 2, sum = 33, done = 10
+factor = 4, sum = 42, done = 5
+gcd(42, 20) = 2
+num[15] = 21, den[15] = 10
+
+i = 21, ii = 16
+sum (inicial) = 22
+factor = 3, sum = 32, done = 7
+gcd(32, 21) = 1
+num[16] = 32, den[16] = 21
+
+i = 22, ii = 17
+sum (inicial) = 23
+factor = 2, sum = 36, done = 11
+gcd(36, 22) = 2
+num[17] = 18, den[17] = 11
+
+i = 23, ii = 18
+sum (inicial) = 24
+gcd(24, 23) = 1
+num[18] = 24, den[18] = 23
+
+i = 24, ii = 19
+sum (inicial) = 25
+factor = 2, sum = 39, done = 12
+factor = 3, sum = 50, done = 8
+factor = 4, sum = 60, done = 6
+gcd(60, 24) = 12
+num[19] = 5, den[19] = 2
+
+i = 25, ii = 20
+sum (inicial) = 26
+factor = 5, sum = 31, done = 5
+gcd(31, 25) = 1
+num[20] = 31, den[20] = 25
+
+i = 26, ii = 21
+sum (inicial) = 27
+factor = 2, sum = 42, done = 13
+gcd(42, 26) = 2
+num[21] = 21, den[21] = 13
+
+i = 27, ii = 22
+sum (inicial) = 28
+factor = 3, sum = 40, done = 9
+gcd(40, 27) = 1
+num[22] = 40, den[22] = 27
+
+i = 28, ii = 23
+sum (inicial) = 29
+factor = 2, sum = 45, done = 14
+factor = 4, sum = 56, done = 7
+gcd(56, 28) = 28
+num[23] = 2, den[23] = 1
+
+i = 29, ii = 24
+sum (inicial) = 30
+gcd(30, 29) = 1
+num[24] = 30, den[24] = 29
+Comparando num[0] = 6/den[0] = 5 com num[1] = 2/den[1] = 1
+Comparando num[0] = 6/den[0] = 5 com num[2] = 8/den[2] = 7
+Comparando num[0] = 6/den[0] = 5 com num[3] = 15/den[3] = 8
+Comparando num[0] = 6/den[0] = 5 com num[4] = 13/den[4] = 9
+Comparando num[0] = 6/den[0] = 5 com num[5] = 9/den[5] = 5
+Comparando num[0] = 6/den[0] = 5 com num[6] = 12/den[6] = 11
+Comparando num[0] = 6/den[0] = 5 com num[7] = 7/den[7] = 3
+Comparando num[0] = 6/den[0] = 5 com num[8] = 14/den[8] = 13
+Comparando num[0] = 6/den[0] = 5 com num[9] = 12/den[9] = 7
+Comparando num[0] = 6/den[0] = 5 com num[10] = 8/den[10] = 5
+Comparando num[0] = 6/den[0] = 5 com num[11] = 31/den[11] = 16
+Comparando num[0] = 6/den[0] = 5 com num[12] = 18/den[12] = 17
+Comparando num[0] = 6/den[0] = 5 com num[13] = 13/den[13] = 6
+Comparando num[0] = 6/den[0] = 5 com num[14] = 20/den[14] = 19
+Comparando num[0] = 6/den[0] = 5 com num[15] = 21/den[15] = 10
+Comparando num[0] = 6/den[0] = 5 com num[16] = 32/den[16] = 21
+Comparando num[0] = 6/den[0] = 5 com num[17] = 18/den[17] = 11
+Comparando num[0] = 6/den[0] = 5 com num[18] = 24/den[18] = 23
+Comparando num[0] = 6/den[0] = 5 com num[19] = 5/den[19] = 2
+Comparando num[0] = 6/den[0] = 5 com num[20] = 31/den[20] = 25
+Comparando num[0] = 6/den[0] = 5 com num[21] = 21/den[21] = 13
+Comparando num[0] = 6/den[0] = 5 com num[22] = 40/den[22] = 27
+Comparando num[0] = 6/den[0] = 5 com num[23] = 2/den[23] = 1
+Comparando num[0] = 6/den[0] = 5 com num[24] = 30/den[24] = 29
+Comparando num[1] = 2/den[1] = 1 com num[2] = 8/den[2] = 7
+Comparando num[1] = 2/den[1] = 1 com num[3] = 15/den[3] = 8
+Comparando num[1] = 2/den[1] = 1 com num[4] = 13/den[4] = 9
+Comparando num[1] = 2/den[1] = 1 com num[5] = 9/den[5] = 5
+Comparando num[1] = 2/den[1] = 1 com num[6] = 12/den[6] = 11
+Comparando num[1] = 2/den[1] = 1 com num[7] = 7/den[7] = 3
+Comparando num[1] = 2/den[1] = 1 com num[8] = 14/den[8] = 13
+Comparando num[1] = 2/den[1] = 1 com num[9] = 12/den[9] = 7
+Comparando num[1] = 2/den[1] = 1 com num[10] = 8/den[10] = 5
+Comparando num[1] = 2/den[1] = 1 com num[11] = 31/den[11] = 16
+Comparando num[1] = 2/den[1] = 1 com num[12] = 18/den[12] = 17
+Comparando num[1] = 2/den[1] = 1 com num[13] = 13/den[13] = 6
+Comparando num[1] = 2/den[1] = 1 com num[14] = 20/den[14] = 19
+Comparando num[1] = 2/den[1] = 1 com num[15] = 21/den[15] = 10
+Comparando num[1] = 2/den[1] = 1 com num[16] = 32/den[16] = 21
+Comparando num[1] = 2/den[1] = 1 com num[17] = 18/den[17] = 11
+Comparando num[1] = 2/den[1] = 1 com num[18] = 24/den[18] = 23
+Comparando num[1] = 2/den[1] = 1 com num[19] = 5/den[19] = 2
+Comparando num[1] = 2/den[1] = 1 com num[20] = 31/den[20] = 25
+Comparando num[1] = 2/den[1] = 1 com num[21] = 21/den[21] = 13
+Comparando num[1] = 2/den[1] = 1 com num[22] = 40/den[22] = 27
+Comparando num[1] = 2/den[1] = 1 com num[23] = 2/den[23] = 1
+6 and 28 are FRIENDLY
+Comparando num[1] = 2/den[1] = 1 com num[24] = 30/den[24] = 29
+Comparando num[2] = 8/den[2] = 7 com num[3] = 15/den[3] = 8
+Comparando num[2] = 8/den[2] = 7 com num[4] = 13/den[4] = 9
+Comparando num[2] = 8/den[2] = 7 com num[5] = 9/den[5] = 5
+Comparando num[2] = 8/den[2] = 7 com num[6] = 12/den[6] = 11
+Comparando num[2] = 8/den[2] = 7 com num[7] = 7/den[7] = 3
+Comparando num[2] = 8/den[2] = 7 com num[8] = 14/den[8] = 13
+Comparando num[2] = 8/den[2] = 7 com num[9] = 12/den[9] = 7
+Comparando num[2] = 8/den[2] = 7 com num[10] = 8/den[10] = 5
+Comparando num[2] = 8/den[2] = 7 com num[11] = 31/den[11] = 16
+Comparando num[2] = 8/den[2] = 7 com num[12] = 18/den[12] = 17
+Comparando num[2] = 8/den[2] = 7 com num[13] = 13/den[13] = 6
+Comparando num[2] = 8/den[2] = 7 com num[14] = 20/den[14] = 19
+Comparando num[2] = 8/den[2] = 7 com num[15] = 21/den[15] = 10
+Comparando num[2] = 8/den[2] = 7 com num[16] = 32/den[16] = 21
+Comparando num[2] = 8/den[2] = 7 com num[17] = 18/den[17] = 11
+Comparando num[2] = 8/den[2] = 7 com num[18] = 24/den[18] = 23
+Comparando num[2] = 8/den[2] = 7 com num[19] = 5/den[19] = 2
+Comparando num[2] = 8/den[2] = 7 com num[20] = 31/den[20] = 25
+Comparando num[2] = 8/den[2] = 7 com num[21] = 21/den[21] = 13
+Comparando num[2] = 8/den[2] = 7 com num[22] = 40/den[22] = 27
+Comparando num[2] = 8/den[2] = 7 com num[23] = 2/den[23] = 1
+Comparando num[2] = 8/den[2] = 7 com num[24] = 30/den[24] = 29
+Comparando num[3] = 15/den[3] = 8 com num[4] = 13/den[4] = 9
+Comparando num[3] = 15/den[3] = 8 com num[5] = 9/den[5] = 5
+Comparando num[3] = 15/den[3] = 8 com num[6] = 12/den[6] = 11
+Comparando num[3] = 15/den[3] = 8 com num[7] = 7/den[7] = 3
+Comparando num[3] = 15/den[3] = 8 com num[8] = 14/den[8] = 13
+Comparando num[3] = 15/den[3] = 8 com num[9] = 12/den[9] = 7
+Comparando num[3] = 15/den[3] = 8 com num[10] = 8/den[10] = 5
+Comparando num[3] = 15/den[3] = 8 com num[11] = 31/den[11] = 16
+Comparando num[3] = 15/den[3] = 8 com num[12] = 18/den[12] = 17
+Comparando num[3] = 15/den[3] = 8 com num[13] = 13/den[13] = 6
+Comparando num[3] = 15/den[3] = 8 com num[14] = 20/den[14] = 19
+Comparando num[3] = 15/den[3] = 8 com num[15] = 21/den[15] = 10
+Comparando num[3] = 15/den[3] = 8 com num[16] = 32/den[16] = 21
+Comparando num[3] = 15/den[3] = 8 com num[17] = 18/den[17] = 11
+Comparando num[3] = 15/den[3] = 8 com num[18] = 24/den[18] = 23
+Comparando num[3] = 15/den[3] = 8 com num[19] = 5/den[19] = 2
+Comparando num[3] = 15/den[3] = 8 com num[20] = 31/den[20] = 25
+Comparando num[3] = 15/den[3] = 8 com num[21] = 21/den[21] = 13
+Comparando num[3] = 15/den[3] = 8 com num[22] = 40/den[22] = 27
+Comparando num[3] = 15/den[3] = 8 com num[23] = 2/den[23] = 1
+Comparando num[3] = 15/den[3] = 8 com num[24] = 30/den[24] = 29
+Comparando num[4] = 13/den[4] = 9 com num[5] = 9/den[5] = 5
+Comparando num[4] = 13/den[4] = 9 com num[6] = 12/den[6] = 11
+Comparando num[4] = 13/den[4] = 9 com num[7] = 7/den[7] = 3
+Comparando num[4] = 13/den[4] = 9 com num[8] = 14/den[8] = 13
+Comparando num[4] = 13/den[4] = 9 com num[9] = 12/den[9] = 7
+Comparando num[4] = 13/den[4] = 9 com num[10] = 8/den[10] = 5
+Comparando num[4] = 13/den[4] = 9 com num[11] = 31/den[11] = 16
+Comparando num[4] = 13/den[4] = 9 com num[12] = 18/den[12] = 17
+Comparando num[4] = 13/den[4] = 9 com num[13] = 13/den[13] = 6
+Comparando num[4] = 13/den[4] = 9 com num[14] = 20/den[14] = 19
+Comparando num[4] = 13/den[4] = 9 com num[15] = 21/den[15] = 10
+Comparando num[4] = 13/den[4] = 9 com num[16] = 32/den[16] = 21
+Comparando num[4] = 13/den[4] = 9 com num[17] = 18/den[17] = 11
+Comparando num[4] = 13/den[4] = 9 com num[18] = 24/den[18] = 23
+Comparando num[4] = 13/den[4] = 9 com num[19] = 5/den[19] = 2
+Comparando num[4] = 13/den[4] = 9 com num[20] = 31/den[20] = 25
+Comparando num[4] = 13/den[4] = 9 com num[21] = 21/den[21] = 13
+Comparando num[4] = 13/den[4] = 9 com num[22] = 40/den[22] = 27
+Comparando num[4] = 13/den[4] = 9 com num[23] = 2/den[23] = 1
+Comparando num[4] = 13/den[4] = 9 com num[24] = 30/den[24] = 29
+Comparando num[5] = 9/den[5] = 5 com num[6] = 12/den[6] = 11
+Comparando num[5] = 9/den[5] = 5 com num[7] = 7/den[7] = 3
+Comparando num[5] = 9/den[5] = 5 com num[8] = 14/den[8] = 13
+Comparando num[5] = 9/den[5] = 5 com num[9] = 12/den[9] = 7
+Comparando num[5] = 9/den[5] = 5 com num[10] = 8/den[10] = 5
+Comparando num[5] = 9/den[5] = 5 com num[11] = 31/den[11] = 16
+Comparando num[5] = 9/den[5] = 5 com num[12] = 18/den[12] = 17
+Comparando num[5] = 9/den[5] = 5 com num[13] = 13/den[13] = 6
+Comparando num[5] = 9/den[5] = 5 com num[14] = 20/den[14] = 19
+Comparando num[5] = 9/den[5] = 5 com num[15] = 21/den[15] = 10
+Comparando num[5] = 9/den[5] = 5 com num[16] = 32/den[16] = 21
+Comparando num[5] = 9/den[5] = 5 com num[17] = 18/den[17] = 11
+Comparando num[5] = 9/den[5] = 5 com num[18] = 24/den[18] = 23
+Comparando num[5] = 9/den[5] = 5 com num[19] = 5/den[19] = 2
+Comparando num[5] = 9/den[5] = 5 com num[20] = 31/den[20] = 25
+Comparando num[5] = 9/den[5] = 5 com num[21] = 21/den[21] = 13
+Comparando num[5] = 9/den[5] = 5 com num[22] = 40/den[22] = 27
+Comparando num[5] = 9/den[5] = 5 com num[23] = 2/den[23] = 1
+Comparando num[5] = 9/den[5] = 5 com num[24] = 30/den[24] = 29
+Comparando num[6] = 12/den[6] = 11 com num[7] = 7/den[7] = 3
+Comparando num[6] = 12/den[6] = 11 com num[8] = 14/den[8] = 13
+Comparando num[6] = 12/den[6] = 11 com num[9] = 12/den[9] = 7
+Comparando num[6] = 12/den[6] = 11 com num[10] = 8/den[10] = 5
+Comparando num[6] = 12/den[6] = 11 com num[11] = 31/den[11] = 16
+Comparando num[6] = 12/den[6] = 11 com num[12] = 18/den[12] = 17
+Comparando num[6] = 12/den[6] = 11 com num[13] = 13/den[13] = 6
+Comparando num[6] = 12/den[6] = 11 com num[14] = 20/den[14] = 19
+Comparando num[6] = 12/den[6] = 11 com num[15] = 21/den[15] = 10
+Comparando num[6] = 12/den[6] = 11 com num[16] = 32/den[16] = 21
+Comparando num[6] = 12/den[6] = 11 com num[17] = 18/den[17] = 11
+Comparando num[6] = 12/den[6] = 11 com num[18] = 24/den[18] = 23
+Comparando num[6] = 12/den[6] = 11 com num[19] = 5/den[19] = 2
+Comparando num[6] = 12/den[6] = 11 com num[20] = 31/den[20] = 25
+Comparando num[6] = 12/den[6] = 11 com num[21] = 21/den[21] = 13
+Comparando num[6] = 12/den[6] = 11 com num[22] = 40/den[22] = 27
+Comparando num[6] = 12/den[6] = 11 com num[23] = 2/den[23] = 1
+Comparando num[6] = 12/den[6] = 11 com num[24] = 30/den[24] = 29
+Comparando num[7] = 7/den[7] = 3 com num[8] = 14/den[8] = 13
+Comparando num[7] = 7/den[7] = 3 com num[9] = 12/den[9] = 7
+Comparando num[7] = 7/den[7] = 3 com num[10] = 8/den[10] = 5
+Comparando num[7] = 7/den[7] = 3 com num[11] = 31/den[11] = 16
+Comparando num[7] = 7/den[7] = 3 com num[12] = 18/den[12] = 17
+Comparando num[7] = 7/den[7] = 3 com num[13] = 13/den[13] = 6
+Comparando num[7] = 7/den[7] = 3 com num[14] = 20/den[14] = 19
+Comparando num[7] = 7/den[7] = 3 com num[15] = 21/den[15] = 10
+Comparando num[7] = 7/den[7] = 3 com num[16] = 32/den[16] = 21
+Comparando num[7] = 7/den[7] = 3 com num[17] = 18/den[17] = 11
+Comparando num[7] = 7/den[7] = 3 com num[18] = 24/den[18] = 23
+Comparando num[7] = 7/den[7] = 3 com num[19] = 5/den[19] = 2
+Comparando num[7] = 7/den[7] = 3 com num[20] = 31/den[20] = 25
+Comparando num[7] = 7/den[7] = 3 com num[21] = 21/den[21] = 13
+Comparando num[7] = 7/den[7] = 3 com num[22] = 40/den[22] = 27
+Comparando num[7] = 7/den[7] = 3 com num[23] = 2/den[23] = 1
+Comparando num[7] = 7/den[7] = 3 com num[24] = 30/den[24] = 29
+Comparando num[8] = 14/den[8] = 13 com num[9] = 12/den[9] = 7
+Comparando num[8] = 14/den[8] = 13 com num[10] = 8/den[10] = 5
+Comparando num[8] = 14/den[8] = 13 com num[11] = 31/den[11] = 16
+Comparando num[8] = 14/den[8] = 13 com num[12] = 18/den[12] = 17
+Comparando num[8] = 14/den[8] = 13 com num[13] = 13/den[13] = 6
+Comparando num[8] = 14/den[8] = 13 com num[14] = 20/den[14] = 19
+Comparando num[8] = 14/den[8] = 13 com num[15] = 21/den[15] = 10
+Comparando num[8] = 14/den[8] = 13 com num[16] = 32/den[16] = 21
+Comparando num[8] = 14/den[8] = 13 com num[17] = 18/den[17] = 11
+Comparando num[8] = 14/den[8] = 13 com num[18] = 24/den[18] = 23
+Comparando num[8] = 14/den[8] = 13 com num[19] = 5/den[19] = 2
+Comparando num[8] = 14/den[8] = 13 com num[20] = 31/den[20] = 25
+Comparando num[8] = 14/den[8] = 13 com num[21] = 21/den[21] = 13
+Comparando num[8] = 14/den[8] = 13 com num[22] = 40/den[22] = 27
+Comparando num[8] = 14/den[8] = 13 com num[23] = 2/den[23] = 1
+Comparando num[8] = 14/den[8] = 13 com num[24] = 30/den[24] = 29
+Comparando num[9] = 12/den[9] = 7 com num[10] = 8/den[10] = 5
+Comparando num[9] = 12/den[9] = 7 com num[11] = 31/den[11] = 16
+Comparando num[9] = 12/den[9] = 7 com num[12] = 18/den[12] = 17
+Comparando num[9] = 12/den[9] = 7 com num[13] = 13/den[13] = 6
+Comparando num[9] = 12/den[9] = 7 com num[14] = 20/den[14] = 19
+Comparando num[9] = 12/den[9] = 7 com num[15] = 21/den[15] = 10
+Comparando num[9] = 12/den[9] = 7 com num[16] = 32/den[16] = 21
+Comparando num[9] = 12/den[9] = 7 com num[17] = 18/den[17] = 11
+Comparando num[9] = 12/den[9] = 7 com num[18] = 24/den[18] = 23
+Comparando num[9] = 12/den[9] = 7 com num[19] = 5/den[19] = 2
+Comparando num[9] = 12/den[9] = 7 com num[20] = 31/den[20] = 25
+Comparando num[9] = 12/den[9] = 7 com num[21] = 21/den[21] = 13
+Comparando num[9] = 12/den[9] = 7 com num[22] = 40/den[22] = 27
+Comparando num[9] = 12/den[9] = 7 com num[23] = 2/den[23] = 1
+Comparando num[9] = 12/den[9] = 7 com num[24] = 30/den[24] = 29
+Comparando num[10] = 8/den[10] = 5 com num[11] = 31/den[11] = 16
+Comparando num[10] = 8/den[10] = 5 com num[12] = 18/den[12] = 17
+Comparando num[10] = 8/den[10] = 5 com num[13] = 13/den[13] = 6
+Comparando num[10] = 8/den[10] = 5 com num[14] = 20/den[14] = 19
+Comparando num[10] = 8/den[10] = 5 com num[15] = 21/den[15] = 10
+Comparando num[10] = 8/den[10] = 5 com num[16] = 32/den[16] = 21
+Comparando num[10] = 8/den[10] = 5 com num[17] = 18/den[17] = 11
+Comparando num[10] = 8/den[10] = 5 com num[18] = 24/den[18] = 23
+Comparando num[10] = 8/den[10] = 5 com num[19] = 5/den[19] = 2
+Comparando num[10] = 8/den[10] = 5 com num[20] = 31/den[20] = 25
+Comparando num[10] = 8/den[10] = 5 com num[21] = 21/den[21] = 13
+Comparando num[10] = 8/den[10] = 5 com num[22] = 40/den[22] = 27
+Comparando num[10] = 8/den[10] = 5 com num[23] = 2/den[23] = 1
+Comparando num[10] = 8/den[10] = 5 com num[24] = 30/den[24] = 29
+Comparando num[11] = 31/den[11] = 16 com num[12] = 18/den[12] = 17
+Comparando num[11] = 31/den[11] = 16 com num[13] = 13/den[13] = 6
+Comparando num[11] = 31/den[11] = 16 com num[14] = 20/den[14] = 19
+Comparando num[11] = 31/den[11] = 16 com num[15] = 21/den[15] = 10
+Comparando num[11] = 31/den[11] = 16 com num[16] = 32/den[16] = 21
+Comparando num[11] = 31/den[11] = 16 com num[17] = 18/den[17] = 11
+Comparando num[11] = 31/den[11] = 16 com num[18] = 24/den[18] = 23
+Comparando num[11] = 31/den[11] = 16 com num[19] = 5/den[19] = 2
+Comparando num[11] = 31/den[11] = 16 com num[20] = 31/den[20] = 25
+Comparando num[11] = 31/den[11] = 16 com num[21] = 21/den[21] = 13
+Comparando num[11] = 31/den[11] = 16 com num[22] = 40/den[22] = 27
+Comparando num[11] = 31/den[11] = 16 com num[23] = 2/den[23] = 1
+Comparando num[11] = 31/den[11] = 16 com num[24] = 30/den[24] = 29
+Comparando num[12] = 18/den[12] = 17 com num[13] = 13/den[13] = 6
+Comparando num[12] = 18/den[12] = 17 com num[14] = 20/den[14] = 19
+Comparando num[12] = 18/den[12] = 17 com num[15] = 21/den[15] = 10
+Comparando num[12] = 18/den[12] = 17 com num[16] = 32/den[16] = 21
+Comparando num[12] = 18/den[12] = 17 com num[17] = 18/den[17] = 11
+Comparando num[12] = 18/den[12] = 17 com num[18] = 24/den[18] = 23
+Comparando num[12] = 18/den[12] = 17 com num[19] = 5/den[19] = 2
+Comparando num[12] = 18/den[12] = 17 com num[20] = 31/den[20] = 25
+Comparando num[12] = 18/den[12] = 17 com num[21] = 21/den[21] = 13
+Comparando num[12] = 18/den[12] = 17 com num[22] = 40/den[22] = 27
+Comparando num[12] = 18/den[12] = 17 com num[23] = 2/den[23] = 1
+Comparando num[12] = 18/den[12] = 17 com num[24] = 30/den[24] = 29
+Comparando num[13] = 13/den[13] = 6 com num[14] = 20/den[14] = 19
+Comparando num[13] = 13/den[13] = 6 com num[15] = 21/den[15] = 10
+Comparando num[13] = 13/den[13] = 6 com num[16] = 32/den[16] = 21
+Comparando num[13] = 13/den[13] = 6 com num[17] = 18/den[17] = 11
+Comparando num[13] = 13/den[13] = 6 com num[18] = 24/den[18] = 23
+Comparando num[13] = 13/den[13] = 6 com num[19] = 5/den[19] = 2
+Comparando num[13] = 13/den[13] = 6 com num[20] = 31/den[20] = 25
+Comparando num[13] = 13/den[13] = 6 com num[21] = 21/den[21] = 13
+Comparando num[13] = 13/den[13] = 6 com num[22] = 40/den[22] = 27
+Comparando num[13] = 13/den[13] = 6 com num[23] = 2/den[23] = 1
+Comparando num[13] = 13/den[13] = 6 com num[24] = 30/den[24] = 29
+Comparando num[14] = 20/den[14] = 19 com num[15] = 21/den[15] = 10
+Comparando num[14] = 20/den[14] = 19 com num[16] = 32/den[16] = 21
+Comparando num[14] = 20/den[14] = 19 com num[17] = 18/den[17] = 11
+Comparando num[14] = 20/den[14] = 19 com num[18] = 24/den[18] = 23
+Comparando num[14] = 20/den[14] = 19 com num[19] = 5/den[19] = 2
+Comparando num[14] = 20/den[14] = 19 com num[20] = 31/den[20] = 25
+Comparando num[14] = 20/den[14] = 19 com num[21] = 21/den[21] = 13
+Comparando num[14] = 20/den[14] = 19 com num[22] = 40/den[22] = 27
+Comparando num[14] = 20/den[14] = 19 com num[23] = 2/den[23] = 1
+Comparando num[14] = 20/den[14] = 19 com num[24] = 30/den[24] = 29
+Comparando num[15] = 21/den[15] = 10 com num[16] = 32/den[16] = 21
+Comparando num[15] = 21/den[15] = 10 com num[17] = 18/den[17] = 11
+Comparando num[15] = 21/den[15] = 10 com num[18] = 24/den[18] = 23
+Comparando num[15] = 21/den[15] = 10 com num[19] = 5/den[19] = 2
+Comparando num[15] = 21/den[15] = 10 com num[20] = 31/den[20] = 25
+Comparando num[15] = 21/den[15] = 10 com num[21] = 21/den[21] = 13
+Comparando num[15] = 21/den[15] = 10 com num[22] = 40/den[22] = 27
+Comparando num[15] = 21/den[15] = 10 com num[23] = 2/den[23] = 1
+Comparando num[15] = 21/den[15] = 10 com num[24] = 30/den[24] = 29
+Comparando num[16] = 32/den[16] = 21 com num[17] = 18/den[17] = 11
+Comparando num[16] = 32/den[16] = 21 com num[18] = 24/den[18] = 23
+Comparando num[16] = 32/den[16] = 21 com num[19] = 5/den[19] = 2
+Comparando num[16] = 32/den[16] = 21 com num[20] = 31/den[20] = 25
+Comparando num[16] = 32/den[16] = 21 com num[21] = 21/den[21] = 13
+Comparando num[16] = 32/den[16] = 21 com num[22] = 40/den[22] = 27
+Comparando num[16] = 32/den[16] = 21 com num[23] = 2/den[23] = 1
+Comparando num[16] = 32/den[16] = 21 com num[24] = 30/den[24] = 29
+Comparando num[17] = 18/den[17] = 11 com num[18] = 24/den[18] = 23
+Comparando num[17] = 18/den[17] = 11 com num[19] = 5/den[19] = 2
+Comparando num[17] = 18/den[17] = 11 com num[20] = 31/den[20] = 25
+Comparando num[17] = 18/den[17] = 11 com num[21] = 21/den[21] = 13
+Comparando num[17] = 18/den[17] = 11 com num[22] = 40/den[22] = 27
+Comparando num[17] = 18/den[17] = 11 com num[23] = 2/den[23] = 1
+Comparando num[17] = 18/den[17] = 11 com num[24] = 30/den[24] = 29
+Comparando num[18] = 24/den[18] = 23 com num[19] = 5/den[19] = 2
+Comparando num[18] = 24/den[18] = 23 com num[20] = 31/den[20] = 25
+Comparando num[18] = 24/den[18] = 23 com num[21] = 21/den[21] = 13
+Comparando num[18] = 24/den[18] = 23 com num[22] = 40/den[22] = 27
+Comparando num[18] = 24/den[18] = 23 com num[23] = 2/den[23] = 1
+Comparando num[18] = 24/den[18] = 23 com num[24] = 30/den[24] = 29
+Comparando num[19] = 5/den[19] = 2 com num[20] = 31/den[20] = 25
+Comparando num[19] = 5/den[19] = 2 com num[21] = 21/den[21] = 13
+Comparando num[19] = 5/den[19] = 2 com num[22] = 40/den[22] = 27
+Comparando num[19] = 5/den[19] = 2 com num[23] = 2/den[23] = 1
+Comparando num[19] = 5/den[19] = 2 com num[24] = 30/den[24] = 29
+Comparando num[20] = 31/den[20] = 25 com num[21] = 21/den[21] = 13
+Comparando num[20] = 31/den[20] = 25 com num[22] = 40/den[22] = 27
+Comparando num[20] = 31/den[20] = 25 com num[23] = 2/den[23] = 1
+Comparando num[20] = 31/den[20] = 25 com num[24] = 30/den[24] = 29
+Comparando num[21] = 21/den[21] = 13 com num[22] = 40/den[22] = 27
+Comparando num[21] = 21/den[21] = 13 com num[23] = 2/den[23] = 1
+Comparando num[21] = 21/den[21] = 13 com num[24] = 30/den[24] = 29
+Comparando num[22] = 40/den[22] = 27 com num[23] = 2/den[23] = 1
+Comparando num[22] = 40/den[22] = 27 com num[24] = 30/den[24] = 29
+Comparando num[23] = 2/den[23] = 1 com num[24] = 30/den[24] = 29
