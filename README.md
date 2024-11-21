@@ -1,6 +1,6 @@
-
 # Compiling e executing
 `gcc main.c –o main –fopenmp `
+`clang -fopenmp main.c -o main  `
 `./main`
 
 # Definig thread number
