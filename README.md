@@ -1,6 +1,6 @@
 
 # Compiling e executing
-`gcc main.c –o main -fopenmp=libomp `
+`gcc main.c –o main -fopenmp `
 
 `./main`
 
@@ -8,6 +8,20 @@
 ` gcc -o main main.c -fopenmp`
 
 `./main`
+
+## PCAD
+
+Da máquina local para o PCAD (a partir da máquina pessoal)
+
+`ssh <usuario_no_pcad>@gppd-hpc.inf.ufrgs.br`
+
+`rsync --verbose --progress --recursive /home/yasmin/Documentos/Github/friendlyNumbers workshop@gppd-hpc.inf.ufrgs.br:~/friendly_numbers`
+
+### Alocando hype
+
+`salloc -p hype -t <tempo que vc quer alocar HH:MM:SS>`
+
+
 
 # Defining thread number
 export OMP_NUM_THREADS=numeroThreads
