@@ -10,6 +10,9 @@ int gcd(int u, int v) {
 }
 
 void friendly_numbers(long int start, long int end) {
+    double itime, ftime, exec_time;
+    itime = omp_get_wtime();
+
     long int last = end - start + 1; // n de elementos no intervalo
 
     long int *the_num; //nros do intervalo
@@ -20,7 +23,7 @@ void friendly_numbers(long int start, long int end) {
     den = (long int*) malloc(sizeof(long int) * last);
 
     long int i, j, factor, ii, sum, done, n;
-    #pragma omp parallel for
+    #pragma omp for
         //calcula soma dos divisores para cada numero do intervalo [start,end]
         for (i = start; i <= end; i++) {
             ii = i - start; // indice ajustado pra comecar de 0
@@ -46,6 +49,7 @@ void friendly_numbers(long int start, long int end) {
             num[ii] /= n;
             den[ii] /= n;
         }
+
     #pragma omp for collapse(2)
         for (i = 0; i < last; i++) {
             for (j = i + 1; j < last; j++) {
@@ -58,12 +62,15 @@ void friendly_numbers(long int start, long int end) {
     free(the_num);
     free(num);
     free(den);
+
+    ftime = omp_get_wtime();
+    exec_time = ftime - itime;
+    printf("\n\nTime taken is %f \n\n", exec_time);
 }
 //}
 
 int main(int argc, char **argv) {
-    double itime, ftime, exec_time;
-    itime = omp_get_wtime();
+
 
     long int start;
     long int end;
@@ -76,8 +83,6 @@ int main(int argc, char **argv) {
 
     }
 
-    ftime = omp_get_wtime();
-    exec_time = ftime - itime;
-    printf("\n\nTime taken is %f", exec_time);
+
     return 0;
 }

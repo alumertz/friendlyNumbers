@@ -1,9 +1,15 @@
 
 # Compiling e executing
-`gcc main.c –o main –fopenmp `
+`gcc main.c –o main -fopenmp=libomp `
+
 `./main`
 
-# Definig thread number
+## On Ubuntu
+` gcc -o main main.c -fopenmp`
+
+`./main`
+
+# Defining thread number
 export OMP_NUM_THREADS=numeroThreads
 
 # Mutually Friendly Numbers
