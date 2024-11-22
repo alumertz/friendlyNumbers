@@ -24,7 +24,7 @@ void friendly_numbers(long int start, long int end) {
     //calcula soma dos divisores para cada numero do intervalo [start,end]
     #pragma omp parallel private (i, ii, sum, done, factor) shared (the_num, num, den)
     {
-         #pragma omp for
+        #pragma omp for
         for (i = start; i <= end; i++) {
             ii = i - start; // indice ajustado pra comecar de 0
             sum = 1 + i; //inicializa soma dos div com 1
@@ -33,12 +33,14 @@ void friendly_numbers(long int start, long int end) {
             factor = 2; // fator de divisao
 
             //testa fatores e soma elas
-            for (factor = 2; factor < (i / factor); factor++) {
-                if ((i % factor) == 0) {
+            //#pragma omp parallel for reduction(+:sum)
+            while (factor < done){
+                if ((i % factor) == 0){
                     sum += (factor + (i / factor));
-                    if ((i / factor) == factor)
+                    if ((done = i / factor) == factor)
                         sum -= factor;
                 }
+                factor++;
             }
 
             num[ii] = sum;
