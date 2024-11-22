@@ -9,6 +9,7 @@ int gcd(int u, int v) {
     return gcd(v, u % v);
 }
 
+
 void friendly_numbers(long int start, long int end) {
     long int last = end - start + 1; // n de elementos no intervalo
 
@@ -22,6 +23,7 @@ void friendly_numbers(long int start, long int end) {
     long int i, j, factor, ii, sum, done, n;
 
     //calcula soma dos divisores para cada numero do intervalo [start,end]
+    #pragma omp parallel for private(factor, done, sum, ii) schedule(dynamic)
     for (i = start; i <= end; i++) {
         ii = i - start; // indice ajustado pra comecar de 0
         sum = 1 + i; //inicializa soma dos div com 1
@@ -30,8 +32,9 @@ void friendly_numbers(long int start, long int end) {
         factor = 2; // fator de divisao
 
         //testa fatores e soma eles
+        #pragma omp simd reduction(+:sum)
         while (factor < done){
-            if ((i % factor) == 0){
+            if ((i % factor) == 0){ //poderia ser compartillhado
                 sum += (factor + (i / factor));
                 if ((done = i / factor) == factor)
                     sum -= factor;
@@ -47,6 +50,7 @@ void friendly_numbers(long int start, long int end) {
         den[ii] /= n;
     }
 
+    #pragma omp parallel for private(j) schedule(dynamic) nowait
     for (i = 0; i < last; i++) {
         for (j = i + 1; j < last; j++) {
             if ((num[i] == num[j]) && (den[i] == den[j]))
@@ -59,18 +63,23 @@ void friendly_numbers(long int start, long int end) {
     free(num);
     free(den);
 }
-//}
 
 int main(int argc, char **argv) {
     long int start;
     long int end;
-    while(1){
-        scanf("%ld%ld", &start, &end);
-        if (start == 0 && end == 0)
-            break;
-        printf("Number %ld to %ld\n", start, end);
-        friendly_numbers(start, end);
 
+    #pragma omp parallel {
+        #pragma omp single {
+            while(1){
+                scanf("%ld%ld", &start, &end);
+                if (start == 0 && end == 0)
+                    break;
+                printf("Number %ld to %ld\n", start, end);
+                #pragma omp task firstprivate(start, end){
+                    friendly_numbers(start, end);
+                }
+            }
+        }
     }
     return 0;
 }
