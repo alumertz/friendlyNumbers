@@ -22,43 +22,52 @@ void friendly_numbers(long int start, long int end) {
     long int i, j, factor, ii, sum, done, n;
 
     //calcula soma dos divisores para cada numero do intervalo [start,end]
-    for (i = start; i <= end; i++) {
-        ii = i - start; // indice ajustado pra comecar de 0
-        sum = 1 + i; //inicializa soma dos div com 1
-        the_num[ii] = i; //numero usado
-        done = i; // limite para factor, é atualizado dps
-        factor = 2; // fator de divisao
-
-        //testa fatores e soma elas
-        for (factor = 2; factor < (i / factor); factor++) {
-            if ((i % factor) == 0) {
-                sum += (factor + (i / factor));
-                if ((i / factor) == factor)
-                    sum -= factor;
-            }
-        }
-
-        num[ii] = sum;
-        den[ii] = i;
-
-        //calcula fracao simplificada
-        n = gcd(num[ii], den[ii]);
-        num[ii] /= n;
-        den[ii] /= n;
-    }
-
-    #pragma omp parallel private(i, j) shared(den, num, the_num) num_threads(4)
+    //#pragma omp parallel private (i, ii, sum, done, factor) shared (the_num, num, den)
     {
-     #pragma omp for
-        for(i = 0; i < last; i++) {
+        #pragma omp for
+        for (i = start; i <= end; i++) {
+            ii = i - start; // indice ajustado pra comecar de 0
+            sum = 1 + i; //inicializa soma dos div com 1
+            the_num[ii] = i; //numero usado
+            done = i; // limite para factor, é atualizado dps
+            factor = 2; // fator de divisao
+
+            //testa fatores e soma elas
+            for (factor = 2; factor < (i / factor); factor++) {
+                if ((i % factor) == 0) {
+                    sum += (factor + (i / factor));
+                    if ((i / factor) == factor)
+                        sum -= factor;
+                }
+            }
+
+            // while (factor < done){
+            //     if ((i % factor) == 0){
+            //         sum += (factor + (i / factor));
+            //         if ((done = i / factor) == factor)
+            //             sum -= factor;
+            //     }
+            //     factor++;
+            // }
+
+            num[ii] = sum;
+            den[ii] = i;
+
+            //calcula fracao simplificada
+            n = gcd(num[ii], den[ii]);
+            num[ii] /= n;
+            den[ii] /= n;
+        }
+    }
+    
+    for(i = 0; i < last; i++) {
         for (j = i + 1; j < last; j++) {
             if ((num[i] == num[j]) && (den[i] == den[j]))
                 printf("%ld and %ld are FRIENDLY\n",
                 the_num[i], the_num[j]);
         }
     }
-        }
-
+ 
     free(the_num);
     free(num);
     free(den);
@@ -68,13 +77,24 @@ void friendly_numbers(long int start, long int end) {
 int main(int argc, char **argv) {
     long int start;
     long int end;
-    while(1){
-        scanf("%ld%ld", &start, &end);
-        if (start == 0 && end == 0)
-            break;
-        printf("Number %ld to %ld\n", start, end);
-        friendly_numbers(start, end);
 
+    #pragma omp parallel
+    {
+        #pragma omp single
+        {
+    
+            while(1){
+                scanf("%ld%ld", &start, &end);
+                if (start == 0 && end == 0)
+                    break;
+                printf("Number %ld to %ld\n", start, end);
+                #pragma omp task
+                {
+                    friendly_numbers(start, end);
+                }
+
+            }
+        }
     }
     return 0;
 }

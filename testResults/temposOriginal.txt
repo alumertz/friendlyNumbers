@@ -1,0 +1,22 @@
+1.txt
+real    0m0,018s
+user    0m0,004s
+sys     0m0,004s
+
+real    0m0,021s
+user    0m0,006s
+sys     0m0,004s
+
+2.txt
+
+real    0m33,319s
+user    0m32,371s
+sys     0m0,048s
+
+real    0m34,727s
+user    0m32,019s
+sys     0m0,100s
+
+real    0m31,934s
+user    0m31,868s
+sys     0m0,006s

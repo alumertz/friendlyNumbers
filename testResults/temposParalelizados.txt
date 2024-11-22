@@ -1,0 +1,37 @@
+sem os paralelos em for (i = start; i <= end; i++) {
+
+real    0m25,876s
+user    0m25,761s
+sys     0m0,005s
+
+real    0m0,016s
+user    0m0,006s
+sys     0m0,001s
+
+real    0m33,945s
+user    0m25,789s
+sys     0m0,285s
+
+real    0m0,015s
+user    0m0,003s
+sys     0m0,002s
+
+
+
+com os paralelos em for (i = start; i <= end; i++) {
+
+real    0m0,014s
+user    0m0,005s
+sys     0m0,000s
+
+real    0m21,533s
+user    0m21,471s
+sys     0m0,005s
+
+real    0m22,250s
+user    0m21,598s
+sys     0m0,035s
+
+real    0m0,018s
+user    0m0,008s
+sys     0m0,000s

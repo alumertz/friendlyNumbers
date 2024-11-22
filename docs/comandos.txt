@@ -6,7 +6,7 @@ Para realizar o login via ssh: ssh -i pcad_pdp workshop@gppd-hpc.inf.ufrgs.br
 -Comandos-
 
 Compilar -> gcc -o a test.c -fopenmp
-Executar -> time ./a < 2.txt > out.txt
+Executar -> time ./a < testFiles/2.txt > out.txt
 
 Para editar o programa:
 abrir arqivo -> nano test.c
