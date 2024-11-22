@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
 
     #pragma omp parallel
     {
-        #pragma omp single
+        #pragma omp single // nowait
         {
     
             while(1){
