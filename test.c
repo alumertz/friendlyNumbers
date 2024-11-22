@@ -22,9 +22,9 @@ void friendly_numbers(long int start, long int end) {
     long int i, j, factor, ii, sum, done, n;
 
     //calcula soma dos divisores para cada numero do intervalo [start,end]
-    // #pragma omp parallel private (i, ii, sum, done, factor) shared (the_num, num, den)
-    // {
-    //     #pragma omp for
+    #pragma omp parallel private (i, ii, sum, done, factor) shared (the_num, num, den)
+    {
+         #pragma omp for
         for (i = start; i <= end; i++) {
             ii = i - start; // indice ajustado pra comecar de 0
             sum = 1 + i; //inicializa soma dos div com 1
@@ -41,15 +41,6 @@ void friendly_numbers(long int start, long int end) {
                 }
             }
 
-            // while (factor < done){
-            //     if ((i % factor) == 0){
-            //         sum += (factor + (i / factor));
-            //         if ((done = i / factor) == factor)
-            //             sum -= factor;
-            //     }
-            //     factor++;
-            // }
-
             num[ii] = sum;
             den[ii] = i;
 
@@ -58,7 +49,7 @@ void friendly_numbers(long int start, long int end) {
             num[ii] /= n;
             den[ii] /= n;
         }
-    //}
+    }
     
     for(i = 0; i < last; i++) {
         for (j = i + 1; j < last; j++) {
@@ -72,7 +63,7 @@ void friendly_numbers(long int start, long int end) {
     free(num);
     free(den);
 }
-//}
+
 
 int main(int argc, char **argv) {
     long int start;
@@ -80,7 +71,7 @@ int main(int argc, char **argv) {
 
     #pragma omp parallel
     {
-        #pragma omp single // nowait
+        #pragma omp single 
         {
     
             while(1){
