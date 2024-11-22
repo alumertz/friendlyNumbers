@@ -3,10 +3,10 @@
 #include <omp.h>
 
 //calcula mdc
-int gcd(int u, int v) { 
-    if (v == 0) 
-        return u; 
-    return gcd(v, u % v); 
+int gcd(int u, int v) {
+    if (v == 0)
+        return u;
+    return gcd(v, u % v);
 }
 
 void friendly_numbers(long int start, long int end) {
@@ -29,15 +29,15 @@ void friendly_numbers(long int start, long int end) {
         done = i; // limite para factor, é atualizado dps
         factor = 2; // fator de divisao
 
-        //testa fatores e soma eles
-        while (factor < done){
-            if ((i % factor) == 0){
+        //testa fatores e soma elas
+        for (factor = 2; factor < (i / factor); factor++) {
+            if ((i % factor) == 0) {
                 sum += (factor + (i / factor));
-                if ((done = i / factor) == factor)
+                if ((i / factor) == factor)
                     sum -= factor;
             }
-            factor++;
         }
+
         num[ii] = sum;
         den[ii] = i;
 
@@ -47,13 +47,17 @@ void friendly_numbers(long int start, long int end) {
         den[ii] /= n;
     }
 
-    for (i = 0; i < last; i++) {
+    #pragma omp parallel private(i, j) shared(den, num, the_num) num_threads(4)
+    {
+     #pragma omp for
+        for(i = 0; i < last; i++) {
         for (j = i + 1; j < last; j++) {
             if ((num[i] == num[j]) && (den[i] == den[j]))
                 printf("%ld and %ld are FRIENDLY\n",
                 the_num[i], the_num[j]);
         }
     }
+        }
 
     free(the_num);
     free(num);

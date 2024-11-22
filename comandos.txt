@@ -1,0 +1,21 @@
+O usuário para acessar a máquina é: workshop
+Você precisa usar uma chave privada para autenticação, obdita em:  wget https://inf.ufrgs.br/~cakunas/data/pcad_pdp && chmod 700 pcad_pdp
+Para realizar o login via ssh: ssh -i pcad_pdp workshop@gppd-hpc.inf.ufrgs.br
+
+
+-Comandos-
+
+Compilar -> gcc -o a test.c -fopenmp
+Executar -> time ./a < 2.txt > out.txt
+
+Para editar o programa:
+abrir arqivo -> nano test.c
+edita o que quiser (mouse não funciona, só setas do teclado)
+para salvar -> ctrl + o; aperta enter pra confirmar
+pra sair da pag de edição -> ctrl + x
+
+se quiser só ver o conteúdo do arquivo sem editar -> cat test.c 
+
+para criar um arquivo novo -> touch nome.txt 
+
+nano out.txt mostra quantas linhas tem o arquivo de saida. depois só dar ctrl + x pra sair 
