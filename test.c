@@ -34,13 +34,12 @@ void friendly_numbers(long int start, long int end) {
 
             //testa fatores e soma elas
             //#pragma omp parallel for reduction(+:sum)
-            while (factor < done){
-                if ((i % factor) == 0){
+            for (factor = 2; factor < done; factor++) {
+                if ((i % factor) == 0) {
                     sum += (factor + (i / factor));
                     if ((done = i / factor) == factor)
                         sum -= factor;
                 }
-                factor++;
             }
 
             num[ii] = sum;
