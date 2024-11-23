@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <omp.h>
+#include <math.h>
 
 //calcula mdc
 int gcd(int u, int v) {
@@ -22,22 +23,23 @@ void friendly_numbers(long int start, long int end) {
     long int i, j, factor, ii, sum, done, n;
 
     //calcula soma dos divisores para cada numero do intervalo [start,end]
+    #pragma omp parallel for private(ii, sum, done, factor, n) shared(the_num, num, den, start, end)
     for (i = start; i <= end; i++) {
         ii = i - start; // indice ajustado pra comecar de 0
-        sum = 1 + i; //inicializa soma dos div com 1
+        sum = 1; //inicializa soma dos div com 1
         the_num[ii] = i; //numero usado
-        done = i; // limite para factor, é atualizado dps
-        factor = 2; // fator de divisao
+        done = (int)sqrt(i);
 
-        //testa fatores e soma elas
-        for (factor = 2; factor < (i / factor); factor++) {
-            if ((i % factor) == 0) {
-                sum += (factor + (i / factor));
-                if ((i / factor) == factor)
-                    sum -= factor;
+        //testa fatores e soma eles
+       #pragma omp parallel for reduction(+:sum)
+        for (int factor = 2; factor <= done; factor++) {
+            if (i % factor == 0) {
+                sum += factor;
+                if (factor != i / factor) {
+                    sum += i / factor;
+                }
             }
         }
-
         num[ii] = sum;
         den[ii] = i;
 
@@ -47,23 +49,22 @@ void friendly_numbers(long int start, long int end) {
         den[ii] /= n;
     }
 
-    #pragma omp parallel private(i, j) shared(den, num, the_num) num_threads(4)
+    #pragma omp parallel private(i, j) shared(den, num, the_num)
     {
-     #pragma omp for
-        for(i = 0; i < last; i++) {
-        for (j = i + 1; j < last; j++) {
-            if ((num[i] == num[j]) && (den[i] == den[j]))
-                printf("%ld and %ld are FRIENDLY\n",
-                the_num[i], the_num[j]);
+        #pragma omp for
+        for (i = 0; i < last; i++) {
+            for (j = i + 1; j < last; j++) {
+                if ((num[i] == num[j]) && (den[i] == den[j]))
+                    printf("%ld and %ld are FRIENDLY\n",
+                    the_num[i], the_num[j]);
+            }
         }
     }
-        }
 
     free(the_num);
     free(num);
     free(den);
 }
-//}
 
 int main(int argc, char **argv) {
     long int start;
